@@ -8,3 +8,7 @@ from colorama import Fore, Back, Style
 
 init()
 
+sheet = client.open('Database').worksheet("BIOTECHs")
+all_comps = sheet.col_values(1)
+all_comps.remove('Active Biotechs')
+
