@@ -27,3 +27,10 @@ letters = ['D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
 
 print(Fore.GREEN + "STARTING...")
 print(Style.RESET_ALL)
+
+for i in range(len(all_comps)):
+    for m in range(len(imports)):
+        if all_comps[i] == imports[m] and all_comps[i] not in already_removed:
+            print(all_comps[i])
+            already_removed.append(all_comps[i])
+            final_comps.remove(all_comps[i])
